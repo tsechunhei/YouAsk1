@@ -1,0 +1,340 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Century Gothic;
+        box-sizing: border-box;
+  }
+  
+  body{
+    background-image: url("https://i.imgur.com/LtCPhiZ.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+
+  .container{
+      height: 100vh;
+      width:100%;
+      background-image:"\YouAsk\Backgroudimage.jpg";
+      background-position:center;
+      background-size:cover;
+      position: relative;
+  }
+  
+   .navbar{   
+        width: 100%;
+        height: 80px;
+
+        background: rgb(256,256,256);
+        -webkit-box-shadow: 1px 2px 6px 1px rgba(0,0,0,0.5); 
+        box-shadow: 1px 2px 6px 1px rgba(0,0,0,0.5);
+        min-height: 72px;
+  }  
+
+
+    nav img.logo{
+        width: 70px;
+        height: auto;
+        box-sizing: border-box;
+        margin: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        line-height: 80px;
+        float: left;
+  }
+
+    .active{
+        color: rgba(8, 115, 168, 0.667);
+        cursor: default;
+    }
+  
+    nav{
+      flex: 1;
+      list-style: none;
+      width: 100%;
+      height: 80px;
+  }
+
+    label.brandlogo1{
+        color: #333333;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: monospace; 
+        
+        
+        height: auto;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        line-height: 80px;
+        float: left;
+    }
+    label.brandlogo2{
+        color: #d43939;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: monospace; 
+        
+        
+        height: auto;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        line-height: 80px;
+        float: left;
+    }
+
+    nav ul{
+        float: right;
+}
+  
+    nav ul li {          
+        display:inline-block;
+        line-height: 80px;
+        margin:0px 20px; 
+  }
+  
+    nav ul li a {
+        text-decoration: none;
+        color: #000; 
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;  
+  }
+
+    nav ul li a:hover{
+        color: #2980B9;
+  }
+
+    .login-btn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+}
+
+    .login-btn:hover {
+        background-color: #2980B9;
+}
+
+    .login {
+        position: relative;
+        display: inline-block;
+}
+
+    .checkbtn{
+        font-size: 30px;
+        color: #216ABF;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        margin-top: 20px;
+        cursor: pointer;
+        display: none;
+}
+
+
+    #check{
+        display: none;
+}
+
+
+
+    @media (max-width: 980px) {
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            top: 80px;
+            left: 0;
+            text-align: center;
+            z-index: 100;
+        }
+        nav ul li{
+            display: block;
+            margin: 50px 0 ;
+            line-height: 30px;
+        }
+        nav ul li a {
+            font-size: 20px;
+        }
+        a:hover,a.active{
+            background: none;
+            color: #0082e6;
+        }
+        #check:checked ~ ul {
+            left: 100%;
+        }
+
+
+        .active{
+            color: rgba(8, 115, 168, 0.667);
+            font-size: 20px;
+            cursor: default;
+   }
+}
+
+    div .btn {
+        width: 35px;
+        height: 5px;
+        background-color:#216ABF;
+        margin: 6px 0;      
+}
+   
+    .landingTop{
+        border: 2px solid;
+    }
+    .wrapper {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 2px solid;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+       
+        margin-left: 20;
+        
+    }
+
+    .slogan1{
+        color: honeydew;
+        padding-top: 30px;
+        font-size: 20px;
+        box-sizing: border-box;
+        }
+    .slogan2{
+        color:honeydew;
+        padding-top: 10px;            
+        font-size: 40px;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+    .slogan3{
+        color:honeydew;
+        padding-top: 10px;           
+        font-size: 40px;
+        font-weight: bold;            
+        box-sizing: border-box;            
+    }
+
+    .landingpagelogo{
+        box-sizing: border-box;
+        width: 400px;
+        float: right;
+        margin: 5;
+      
+             
+    }
+
+    .Askbutton {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 24px;
+        margin-top: 20px;
+        margin-left: 50px;
+        border-radius: 100px;
+        background: #ffffff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+        background: -moz-linear-gradient(top, #ffffff, #ffffff);
+        background: linear-gradient(to bottom, #ffffff, #ffffff);
+        font: normal normal bold 20px arial;
+        color: #111111;
+        text-decoration: none;
+       
+    }
+    .Askbutton:hover,
+    .Askbutton:focus {
+        color: #111111;
+        text-decoration: none;    
+    }
+
+    .Askbutton:active {
+        background: #999999;
+        background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#ffffff));
+        background: -moz-linear-gradient(top, #999999, #ffffff);
+        background: linear-gradient(to bottom, #999999, #ffffff);
+    }
+
+    .Askbutton:before{
+        content:  "\0000a0";
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        margin: 0 4px -6px -4px;
+        position: relative;
+        top: -2px;
+        left: 0px;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABhklEQVRIibWVwUoDMRCGPxcPRWTpsQ/QoyylLL6M+AZ9l55ESil9EdFDn6D00EOpULx4lyIqVQ/7x52GTXarNjDsZDLJn//fZHICJByxucU/A+Mu3pL58Ua+z8D1L4EJsAa2sjUw1ljV/ErfB0iBKfBl7FVmY1PgnAYtMZYCMy2wBYZADrRluWJb5cwEkkRsj8FEE5+ALEI/AzbKnZixqES52XnWgPUFhWw7yn8SBEiAkQCGEbq+DTVnFMn5QVopOa/aRcB3rFd1DFrAiyi3fT0qmpucAm/ARwjgtGaBJiChL0DiOu/AMwWTLsUtdDcx5ne1ycdQji0Vd/KvzA7qysC1vvexfAfSY/+Y1p2gjPKY9iN5e5qNBbKhOOdNLtqYgP5VE8+AB8r640pFKusrZuvSAugQaRY9oagtt6LuFnFH0fV32vnCA6mVyAL1gBtgSVlNl4r1lNMxIHOPSbBcH9o6Wjwoly/Rb8wy8eUKvmiH+kG5/vPRtyADH+AvEvlyDTiCRJX+N43aevLGNN0mAAAAAElFTkSuQmCC") no-repeat left center transparent;
+        background-size: 100% 100%;
+    }
+
+</style>
+
+
+    
+<html>
+        <head>
+           <meta charset="utf-8">
+         
+            <title> YouAsk </title>
+            <link href="D:\YouAsk\CSS.css" rel="stylesheet" type="test/css" >
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+
+        <body>
+          
+            <div class="container">
+                <div class="navbar"> 
+                    <nav>
+                        
+                        <input type="checkbox" id="check" onclick="myFunction()">
+                        <label for="check" class="checkbtn">
+                            <div class="btn"></div>
+                            <div class="btn"></div>
+                            <div class="btn"></div>
+                    </label>
+                    
+                    <img alt="YouAsk You ask whenever wherever you are" src="D:\YouAsk\LOGO.png"  class="logo">
+                       <label class="brandlogo1" src="D:\YouAsk\LOGO.png">U</label>
+                       <label class="brandlogo2" src="D:\YouAsk\LOGO.png">Ask</label>
+                        <ul>
+                            
+                            <li class="active">Home</li>
+                            <li><a href = "D:\YouAsk\Study _Help.html">Study Help</a></li> 
+                            <li><a href = "">Hire Live Tutor</a></li> 
+                            <li><a href = "">Become a Tutor</a></li>
+                            <li><button onclick="myFunction()" class="login-btn">Login/Register</button></li>
+                        </ul>
+                        
+                        
+
+                    </nav>
+           
+        </div>
+                    <div class="wrapper"> 
+                    <img alt="YouAsk You ask whenever wherever you are" src="D:\YouAsk\landinglogo.png" alt="School vector created by pikisuperstar - www.freepik.com" class="landingpagelogo">
+                    <p class="slogan1">當遇到任何學習問題</p>
+                    <p class="slogan2">只要你問 </p>
+                    <p class="slogan3">UAsk就會有人教你</p>
+                    <a class="Askbutton" href="#">立即發問</a>
+                </div>
+            
+        </div>
+        </body>
+</html>
